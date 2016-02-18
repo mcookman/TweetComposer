@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.attendee.tweet" version="0.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>tweetComposer</name>
+    <DESCRIPTION />
+    <js-module name="tweetComposer" src="tweetComposer.js">
+        <clobbers target="cordova.plugins.tweetComposer" />
+    </js-module><preference name="FABRIC_KEY" />
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="tweetComposer"><param name="android-package" value="com.attendee.tweet.TweetShare" /></feature>
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <meta-data android:name="io.fabric.ApiKey" android:value="$FABRIC_KEY" />
+        </config-file>
+        <framework custom="true" src="src/android/twitter.gradle" type="gradleReference" />
+        <source-file src="src/android/TweetShare.java" target-dir="src/com/attendee/tweet" />
+    </platform><platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="tweetComposer">
+                <param name="ios-package" value="TweetShare" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/TweetShare.h" />
+        <source-file src="src/ios/TweetShare.m" />
+        
+        <framework src="src/ios/Fabric.framework" custom="true" />
+        <framework src="src/ios/TwitterKit.framework" custom="true" />
+        <framework src="src/ios/TwitterCore.framework" custom="true" />
+        <resource-file src="src/ios/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle" />
+        <framework src="CoreText.framework" />
+        <framework src="AddressBook.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="Security.framework" />
+        <framework src="Accounts.framework" />
+        <framework src="Social.framework" />
+        <framework src="CoreData.framework" />
+        <config-file target="*-Info.plist" parent="Fabric">
+            <dict>
+                <key>APIKey</key>
+                <string>$FABRIC_KEY</string>
+                <key>Kits</key>
+                <array></array>
+            </dict>
+        </config-file>
+    </platform>
+</plugin>
