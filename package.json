@@ -1,0 +1,29 @@
+{
+  "name": "TweetComposer",
+  "version": "0.0.2",
+  "description": "Cordova plugin for create tweet message.",
+  "cordova": {
+    "id": "com.attendee.tweet",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Attendee/TweetComposer.git"
+  },
+  "keywords": [
+  	"twitter",
+  	"tweetComposer",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Pongnat Phongan & Attendee Co.,ltd",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Attendee/TweetComposer/issues"
+  },
+  "homepage": "https://github.com/Attendee/TweetComposer#readme"
+}
