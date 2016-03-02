@@ -1,6 +1,6 @@
 {
-  "name": "TweetComposer",
-  "version": "0.0.2",
+  "name": "tweet-composer",
+  "version": "0.0.3",
   "description": "Cordova plugin for create tweet message.",
   "cordova": {
     "id": "com.attendee.tweet",
