@@ -38,9 +38,18 @@ public class TweetShare extends CordovaPlugin {
 
     private void tweet(String text, CallbackContext callbackContext){
         if(text!=null && text.length() > 0){
+			Uri uri = Uri.parse("http://healthdollars.com/img/brand_eh.png");
+			final Card card = new Card.AppCardBuilder(context)
+				.imageUri(uri)
+				.iPhoneId("1096287696")
+				.iPadId("1096287696")
+			.build();
+
             callbackContext.success("Success");
 //            Tweet text this way use when startActivity outside Activity.
-            Intent builder = new TweetComposer.Builder(context).text(text).createIntent();
+            Intent builder = new TweetComposer.Builder(context).text(text)
+				.card(card)
+				.createIntent();
             builder.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(builder);
 
