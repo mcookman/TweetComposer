@@ -30,6 +30,7 @@
     
     TWTRComposer *composer = [[TWTRComposer alloc] init];
     [composer setText:text];
+	
     
     // Called from a UIViewController
     [composer showFromViewController:[self viewController] completion:^(TWTRComposerResult result) {
