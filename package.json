@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Attendee/TweetComposer.git"
+    "url": "git+https://github.com/mcookman/TweetComposer.git"
   },
   "keywords": [
   	"twitter",
@@ -20,10 +20,10 @@
     "cordova-android",
     "cordova-ios"
   ],
-  "author": "Pongnat Phongan & Attendee Co.,ltd",
+  "author": "ExpansionHealth LLC",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/Attendee/TweetComposer/issues"
+    "url": "https://github.com/mcookman/TweetComposer/issues"
   },
-  "homepage": "https://github.com/Attendee/TweetComposer#readme"
+  "homepage": "https://github.com/mcookman/TweetComposer#readme"
 }
